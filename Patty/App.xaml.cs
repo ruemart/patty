@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ControlzEx.Theming;
 using System.Windows;
 
 namespace Patty
@@ -13,5 +8,10 @@ namespace Patty
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            ThemeManager.Current.ChangeTheme(this, "Dark.Lime");
+        }
     }
 }
